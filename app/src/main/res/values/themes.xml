@@ -1,0 +1,26 @@
+<resources>
+    <style name="Theme.LinuxSimulator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#50FA7B</item>
+        <item name="colorPrimaryVariant">#3DBA5C</item>
+        <item name="colorOnPrimary">#0D1117</item>
+        <item name="colorSecondary">#8BE9FD</item>
+        <item name="colorOnSecondary">#0D1117</item>
+        <item name="android:windowBackground">#0D1117</item>
+        <item name="android:statusBarColor">#161B22</item>
+        <item name="android:navigationBarColor">#161B22</item>
+        <item name="android:textColorPrimary">#F8F8F2</item>
+        <item name="android:textColorSecondary">#6272A4</item>
+    </style>
+
+    <style name="QuickBtn" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8BE9FD</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="rippleColor">#8BE9FD</item>
+    </style>
+</resources>

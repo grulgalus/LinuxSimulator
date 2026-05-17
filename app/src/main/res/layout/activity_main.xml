@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1117"
+    android:fitsSystemWindows="true">
+
+    <!-- Terminal Output Area -->
+    <ScrollView
+        android:id="@+id/outputScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:fadeScrollbars="false"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textSize="13sp"
+            android:textColor="#F8F8F2"
+            android:lineSpacingMultiplier="1.2"
+            android:textIsSelectable="true"
+            android:background="@android:color/transparent" />
+
+    </ScrollView>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#21262D" />
+
+    <!-- Quick action bar -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#161B22"
+        android:scrollbars="none"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:divider="@drawable/divider_vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/btnUp"
+                style="@style/QuickBtn"
+                android:text="▲" />
+
+            <Button
+                android:id="@+id/btnDown"
+                style="@style/QuickBtn"
+                android:text="▼" />
+
+            <Button
+                android:id="@+id/btnTab"
+                style="@style/QuickBtn"
+                android:text="Tab" />
+
+            <Button
+                android:id="@+id/btnCtrlC"
+                style="@style/QuickBtn"
+                android:text="^C"
+                android:textColor="#FF5555" />
+
+            <Button
+                android:id="@+id/btnClear"
+                style="@style/QuickBtn"
+                android:text="clear" />
+
+            <Button
+                android:id="@+id/btnPaste"
+                style="@style/QuickBtn"
+                android:text="paste" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Input Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#161B22"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Dollar sign prefix -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ "
+            android:textColor="#50FA7B"
+            android:fontFamily="monospace"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Input -->
+        <EditText
+            android:id="@+id/inputField"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:textColor="#F8F8F2"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:inputType="text|textNoSuggestions"
+            android:maxLines="1"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp" />
+
+        <!-- Send button -->
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:text="↵"
+            android:textSize="18sp"
+            android:textColor="#50FA7B"
+            android:background="@drawable/btn_send_bg"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
